@@ -9,9 +9,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-//directorio publico
 
-app.use( express.static('public') );
 
 //cors
 
