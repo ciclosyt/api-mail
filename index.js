@@ -1,6 +1,4 @@
 const express = require('express');
-const cors = require('cors');
-const path = require('path');
 require('dotenv').config();
 
 //app express
@@ -13,13 +11,10 @@ const port = process.env.PORT || 3000;
 
 app.use( express.static('public') );
 
-//cors
-
-app.use(cors());
 
 //body
 
-app.use( express.json() );
+app.use( express.json({ extended: false }) );
 
 app.use('/api', require('./routes/mail'))
 
